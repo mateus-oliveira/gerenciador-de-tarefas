@@ -30,10 +30,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gerenciador_tarefas',
-        'USER': '<YOUR_MYSQL_USERNAME>',
+        'USER': '<YOUR_MYSQL_USERNAME>', # Eu usei o usuário 'root'
         'PASSWORD': '<YOUR_MYSQL_PASSWORD>',
-        'HOST': '<HOSTNAME>',
-        'PORT': '<PORT_MYSQL_NUMBER>',
+        'HOST': '<HOSTNAME>', # Eu usei 'localhost'
+        'PORT': '<PORT_MYSQL_NUMBER>', # Eu usei a porta padrão '3306'
     }
 }
 ```
