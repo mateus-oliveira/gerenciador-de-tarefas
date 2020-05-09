@@ -14,14 +14,34 @@ Esta aplicação foi desenvolvida seguindo o tutorial da Treina Web uma platafor
 * Bootstrap
 * Heroku
 
-# Para executar este projeto em sua máquina, execute os comandos a seguir:
+# Para executar este projeto em sua máquina:
 
+* Crie um banco de dados: No seu banco de dados MySQL, crie um schema com o nome "gerenciador_tarefas", eu sugiro o uso do [Workbench](https://dev.mysql.com/downloads/workbench/) para acessar o banco diretamente.
+
+* Execute os comandos a seguir
 ```bash
 git clone https://github.com/mateus-oliveira/gerenciador-de-tarefas.git
 cd gerenciador-de-tarefas/
 source ./venv/bin/activate
+```
+* No arquivo [settings.py](./gerenciador_tarefas/gerenciador_tarefas/settings.py) altere as credenciais para que o Django possa se conectar ao seu banco
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gerenciador_tarefas',
+        'USER': '<YOUR_MYSQL_USERNAME>',
+        'PASSWORD': '<YOUR_MYSQL_PASSWORD>',
+        'HOST': '<HOSTNAME>',
+        'PORT': '<PORT_MYSQL_NUMBER>',
+    }
+}
+```
+
+* Após isso, execute os comandos abaixo
+``bash
 python manage.py makemigrations
-python manage.py migrate
+python manage.py migrate`
 python manage.py runserver
 ```
 
