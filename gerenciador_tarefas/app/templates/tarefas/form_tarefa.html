@@ -2,6 +2,9 @@
 {% load meus_filtros %}
 
 {% block conteudo %}
+    <br/>
+    <h1>{{titulo}}</h1>
+    <br />
     <form method="post">
         {% csrf_token %}
         <div class="form-group">
@@ -26,7 +29,7 @@
         </div>
         
         <div class="form-group">
-            <input type="submit" value="Salvar">
+            <input class="btn btn-primary mb-3" type="submit" value="Salvar">
         </div>
     </form>
 {% endblock conteudo %}

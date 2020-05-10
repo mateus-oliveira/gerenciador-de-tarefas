@@ -1,4 +1,4 @@
-class Tarefa():
+class Tarefa:
     def __init__(self, titulo, descricao, data_expiracao, prioridade):
         self.__titulo = titulo
         self.__descricao = descricao
